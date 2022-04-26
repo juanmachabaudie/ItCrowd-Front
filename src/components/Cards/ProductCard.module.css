@@ -1,0 +1,27 @@
+.cardContainer {
+  width: 100%;
+  min-height: 320px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardTitle {
+  margin: 10px;
+  font-size: 2em;
+  font-weight: 400;
+  align-self: flex-start;
+}
+
+.img {
+  width: 100%;
+}
+
+.price {
+  margin: 10px;
+  font-size: 2em;
+  font-weight: 200;
+  align-self: flex-end;
+}

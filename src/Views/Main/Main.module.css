@@ -1,0 +1,70 @@
+.title {
+  font-size: 2em;
+  color: whitesmoke;
+  text-align: center;
+  margin: 10%;
+}
+
+.description {
+  font-size: 1em;
+  color: whitesmoke;
+  text-align: center;
+  margin: 15% 0;
+}
+
+.productsContainer {
+  display: grid;
+  gap: 2%;
+  place-items: center;
+}
+
+.subtitle {
+  font-size: 1.5em;
+  color: whitesmoke;
+  text-align: center;
+}
+.card {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 550px) {
+  .title {
+    margin: 5%;
+  }
+  .description {
+    margin: 2%;
+  }
+  .productsContainer {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 5% auto;
+    gap: 0;
+  }
+  .subtitle {
+    grid-column: 1/3;
+  }
+  .card {
+    padding: 5%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .productsContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10% auto;
+  }
+  .subtitle {
+    grid-column: 1/4;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .productsContainer {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 15% auto;
+  }
+  .subtitle {
+    grid-column: 1/5;
+  }
+}

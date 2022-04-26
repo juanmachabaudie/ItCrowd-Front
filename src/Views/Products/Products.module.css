@@ -1,0 +1,43 @@
+.title {
+  font-size: 2em;
+  color: whitesmoke;
+  text-align: center;
+  margin: 10%;
+}
+
+.productsContainer {
+  display: grid;
+  gap: 2%;
+  place-items: center;
+}
+
+.card {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 550px) {
+  .title {
+    margin: 5%;
+  }
+  .productsContainer {
+    grid-template-columns: 50% 50%;
+  }
+  .card {
+    padding: 5%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .title {
+    margin: 2%;
+  }
+  .productsContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .productsContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

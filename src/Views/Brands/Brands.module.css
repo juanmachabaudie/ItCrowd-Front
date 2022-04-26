@@ -1,0 +1,20 @@
+.brandContainer {
+  display: grid;
+  place-items: center;
+}
+
+@media screen and (min-width: 480px) {
+  .brandContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 700px) {
+  .brandContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1000px) {
+  .brandContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

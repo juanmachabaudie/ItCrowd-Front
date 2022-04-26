@@ -1,0 +1,53 @@
+.title {
+  font-size: 2em;
+  color: whitesmoke;
+  text-align: center;
+  margin: 10%;
+}
+
+.subtitle {
+  font-size: 1.5em;
+  color: whitesmoke;
+  text-align: center;
+  margin: 10%;
+}
+
+.container {
+  display: grid;
+  gap: 2%;
+  place-items: center;
+}
+
+.card {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 550px) {
+  .title {
+    margin: 5%;
+  }
+  .subtitle {
+    margin: 5%;
+  }
+  .container {
+    grid-template-columns: 50% 50%;
+  }
+  .card {
+    padding: 5%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subtitle {
+    margin: 2%;
+  }
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

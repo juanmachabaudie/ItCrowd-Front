@@ -1,0 +1,11 @@
+.select {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: whitesmoke;
+}
+.select:focus {
+  outline: none;
+  border: 2px solid rgb(11, 168, 189);
+}
