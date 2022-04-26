@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from "axios";
+import { URL_PRODUCTS } from "../../constants";
 import Style from "./BrandProducts.module.css";
 import ProductCard from '../Cards/ProductCard';
 
@@ -11,7 +12,7 @@ const BrandProducts = ({ turnBrands }) => {
     useEffect(() => {
 
         const productsByBrand = async () => {
-            const url = `http://localhost:3001/products/brand/${turnBrands[1]}`;
+            const url = `${URL_PRODUCTS}/brand/${turnBrands[1]}`;
             const brandProducts = await axios.get(url);
             const data = brandProducts.data.byBrand;
 

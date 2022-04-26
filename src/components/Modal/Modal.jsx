@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import Style from "./Modal.module.css";
+import { URL_PRODUCTS } from "../../constants";
 import Input from "../Forms/Re-usable/Input";
 
 const Modal = ({ setModal }) => {
@@ -22,7 +23,7 @@ const Modal = ({ setModal }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        const url = `http://localhost:3001/products/${id}`;
+        const url = `${URL_PRODUCTS}/${id}`;
         const response = await axios.delete(url, {
             headers: {
                 Authorization: inputValue.password === "admin" && ("admin")

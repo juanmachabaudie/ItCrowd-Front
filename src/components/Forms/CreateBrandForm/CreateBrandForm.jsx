@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { URL_BRANDS } from "../../../constants";
 import Input from '../Re-usable/Input';
 import Style from "./CreateBrandForm.module.css";
 
@@ -21,11 +22,9 @@ const createBrand = () => {
         })
     };
 
-    const url = "http://localhost:3001/brands";
-
     const handleSumbit = async (e) => {
         e.preventDefault()
-        const response = axios.post(url, inputValues);
+        const response = axios.post(URL_BRANDS, inputValues);
     };
 
     return (

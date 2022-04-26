@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Style from "./Select.module.css";
 import axios from 'axios';
+import { URL_BRANDS } from '../../../constants';
 
 const Select = ({ name, onChange, value }) => {
 
@@ -8,8 +9,7 @@ const Select = ({ name, onChange, value }) => {
 
     useEffect(() => {
         const brandList = async () => {
-            const url = "http://localhost:3001/brands";
-            const call = await axios.get(url);
+            const call = await axios.get(URL_BRANDS);
             const brands = call.data.data;
             setBrands(brands)
         }

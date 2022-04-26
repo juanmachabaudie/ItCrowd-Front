@@ -5,6 +5,7 @@ import axios from 'axios';
 import Input from '../Re-usable/Input';
 import Select from '../Re-usable/Select';
 import SubmitBtn from "../Re-usable/SubmitBtn";
+import { URL_PRODUCTS } from '../../../constants';
 
 const initialInputValues = {
     name: "",
@@ -31,13 +32,13 @@ const CreateUpdateProductForm = ({ view }) => {
     const { id } = useParams();
 
     if (view === "create") {
-        const url = `http://localhost:3001/products/create`;
+        const url = `${URL_PRODUCTS}/create`;
         handleSubmit = async (e) => {
             e.preventDefault();
             const response = await axios.post(url, inputValues);
         }
     } else if (view === "update") {
-        const url = `http://localhost:3001/products/${id}`;
+        const url = `${URL_PRODUCTS}/${id}`;
         handleSubmit = async (e) => {
             e.preventDefault();
             const response = await axios.put(url, inputValues);

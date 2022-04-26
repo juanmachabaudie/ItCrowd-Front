@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Style from "./Main.module.css";
 import ProductCard from "../../components/Cards/ProductCard";
+import { URL_PRODUCTS } from '../../constants';
 
 const Main = () => {
 
@@ -12,8 +13,7 @@ const Main = () => {
 
         const productsCall = async () => {
 
-            const url = "http://localhost:3001/products"
-            const call = await axios.get(url);
+            const call = await axios.get(URL_PRODUCTS);
             const data = call.data.data;
 
             setProducts(data)

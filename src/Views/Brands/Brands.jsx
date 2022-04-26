@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Style from "./Brands.module.css";
 import BrandCard from '../../components/Cards/BrandCard';
 import BrandProducts from '../../components/BrandProducts/BrandProducts';
+import { URL_BRANDS } from '../../constants';
 
 const Brands = () => {
 
@@ -17,8 +18,7 @@ const Brands = () => {
     useEffect(() => {
 
         const brandsCall = async () => {
-            const url = " http://localhost:3001/brands";
-            const brandsCall = await axios.get(url);
+            const brandsCall = await axios.get(URL_BRANDS);
             const data = brandsCall.data.data;
 
             setBrands(data)

@@ -6,6 +6,7 @@ import CreateUpdateProductForm from '../../components/Forms/CeateUpdateProductFo
 import CreateBrandForm from "../../components/Forms/CreateBrandForm/CreateBrandForm";
 import ProductCard from "../../components/Cards/ProductCard";
 import Style from "./Admin.module.css";
+import { URL_PRODUCTS } from '../../constants';
 
 const Admin = () => {
 
@@ -18,8 +19,7 @@ const Admin = () => {
 
     useEffect(() => {
         const productsCall = async () => {
-            const url = "http://localhost:3001/products";
-            const call = await axios.get(url);
+            const call = await axios.get(URL_PRODUCTS);
             const data = call.data.data
             setProducts(data)
         }

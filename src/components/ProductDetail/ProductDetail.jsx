@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Style from "./ProductDetail.module.css";
+import { URL_PRODUCTS } from "../../constants";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import Modal from "../Modal/Modal";
@@ -23,7 +24,7 @@ const ProductDetail = ({ turnView, admin }) => {
 
         const detailOne = async () => {
 
-            const url = `http://localhost:3001/products/${id}`;
+            const url = `${URL_PRODUCTS}/${id}`;
             const call = await axios.get(url);
             const product = call.data.product;
             setDetail(product);
