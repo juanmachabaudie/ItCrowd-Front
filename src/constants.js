@@ -1,4 +1,4 @@
-const baseURL = "https://itluxury.netlify.app/";
+const baseURL = "https://us-central1-cars-api-7abc3.cloudfunctions.net/app/";
 
 export const URL_PRODUCTS = `${baseURL}products`;
 
