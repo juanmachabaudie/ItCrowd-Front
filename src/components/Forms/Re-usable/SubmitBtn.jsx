@@ -1,9 +1,16 @@
 import React from 'react';
 import Style from "./SubmitBtn.module.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
-const SubmitBtn = ({ type }) => {
+const SubmitBtn = ({ text }) => {
     return (
-        <button className={Style.submit} type={type} >Submit</button>
+        <div className={Style.container}>
+            <button className={Style.btn}>
+                <span>{text}</span>
+                <FontAwesomeIcon className={Style.icon} icon={solid("check")} />
+            </button>
+        </div>
     )
 }
 

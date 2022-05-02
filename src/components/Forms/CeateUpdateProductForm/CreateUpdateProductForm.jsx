@@ -11,8 +11,8 @@ const initialInputValues = {
   name: "",
   description: "",
   image: "",
-  price: "",
-  brandid: 0,
+  price: 0,
+  brand: "",
   password: "",
 };
 
@@ -34,13 +34,13 @@ const CreateUpdateProductForm = ({ view }) => {
     const url = `${URL_PRODUCTS}/create`;
     handleSubmit = async (e) => {
       e.preventDefault();
-      await axios.post(url, inputValues);
+      await axios.post(url, { ...inputValues, price: parseInt(inputValues.price) });
     };
   } else if (view === "update") {
     const url = `${URL_PRODUCTS}/${id}`;
     handleSubmit = async (e) => {
       e.preventDefault();
-      await axios.put(url, inputValues);
+      await axios.put(url, { ...inputValues, price: parseInt(inputValues.price) });
     };
   }
 
@@ -74,7 +74,7 @@ const CreateUpdateProductForm = ({ view }) => {
         value={inputValues.price}
         type="number"
       />
-      <Select onChange={handleInputChange} name="brandid" value={inputValues.brandid} />
+      <Select onChange={handleInputChange} name="brand" value={inputValues.brand} />
       <Input
         placeholder="Password"
         onChange={handleInputChange}
@@ -82,7 +82,7 @@ const CreateUpdateProductForm = ({ view }) => {
         value={inputValues.password}
         type="password"
       />
-      <SubmitBtn type="submit" />
+      <SubmitBtn text="Submit" />
     </form>
   );
 };

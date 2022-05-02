@@ -4,6 +4,9 @@ import { useParams, useNavigate } from "react-router-dom";
 import Style from "./Modal.module.css";
 import { URL_PRODUCTS } from "../../constants";
 import Input from "../Forms/Re-usable/Input";
+import SubmitBtn from "../Forms/Re-usable/SubmitBtn";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 const Modal = ({ setModal }) => {
   const [inputValue, setInputValue] = useState({ password: "" });
@@ -34,6 +37,7 @@ const Modal = ({ setModal }) => {
   return (
     <div className={Style.modal}>
       <div className={Style.container}>
+        <FontAwesomeIcon className={Style.exit} icon={solid("xmark")} onClick={() => setModal()} />
         <h2 className={Style.title}>Are you sure to delete this product?</h2>
         <form className={Style.form} onSubmit={handleSubmit}>
           <Input
@@ -43,7 +47,7 @@ const Modal = ({ setModal }) => {
             type="password"
             value={inputValue.password}
           />
-          <button className={Style.btn}>Delete</button>
+          <SubmitBtn text="Delete" />
         </form>
       </div>
     </div>

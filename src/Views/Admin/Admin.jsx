@@ -23,7 +23,7 @@ const Admin = () => {
       setProducts(data);
     };
     productsCall();
-  }, []);
+  }, [view]);
 
   return (
     <>
@@ -46,7 +46,7 @@ const Admin = () => {
         </>
       )}
       {view.createProduct && <CreateUpdateProductForm view="create" />}
-      {view.createBrand && <CreateBrandForm />}
+      {view.createBrand && <CreateBrandForm view="update" />}
     </>
   );
 };

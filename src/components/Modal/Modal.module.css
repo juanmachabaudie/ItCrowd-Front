@@ -12,10 +12,16 @@
 
 .container {
   width: 80%;
-  padding: 5%;
+  padding: 5% 5% 100px 5%;
   box-shadow: inset 0 0 20px rgb(11, 168, 189);
   border-radius: 10px;
   background-color: rgb(150, 150, 150);
+  display: grid;
+}
+
+.exit{
+  font-size: xx-large;
+  justify-self: end;
 }
 
 .title {
@@ -26,25 +32,14 @@
 
 .form {
   display: grid;
-  place-content: center;
-  gap: 10px;
-}
-.btn {
-  justify-self: center;
-  font-size: 1.5em;
-  background-color: rgba(255, 255, 255, 0.3);
-  border: none;
-  border-radius: 15px;
-  padding: 5px;
-  color: whitesmoke;
-  cursor: pointer;
-  text-decoration: none;
+  justify-items: center;
+  gap: 50%;
 }
 
 @media screen and (min-width: 600px) {
   .container {
     width: 60%;
-    padding: 3%;
+    padding: 3% 3% 100px 3%;
   }
 }
 @media screen and (min-width: 800px) {
@@ -55,6 +50,6 @@
 @media screen and (min-width: 1200px) {
   .container {
     width: 25%;
-    padding: 2%;
+    padding: 2% 2% 100px 2%;
   }
 }

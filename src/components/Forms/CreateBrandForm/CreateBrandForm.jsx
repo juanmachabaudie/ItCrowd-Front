@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { URL_BRANDS } from "../../../constants";
 import Input from "../Re-usable/Input";
+import SubmitBtn from "../Re-usable/SubmitBtn";
 import Style from "./CreateBrandForm.module.css";
 
 const initialInputValues = {
@@ -49,9 +50,7 @@ const createBrand = () => {
         type="password"
         value={inputValues.password}
       />
-      <button className={Style.submit} type="submit">
-        Submit
-      </button>
+      <SubmitBtn text="Submit" />
     </form>
   );
 };
