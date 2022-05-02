@@ -28,8 +28,8 @@ const Main = () => {
           repellendus aliquid hic fuga fugiat ad adipisci possimus incidunt delectus.
         </p>
       </div>
+      <h2 className={Style.subtitle}>Take a look at some of our cars!</h2>
       <div className={Style.productsContainer}>
-        <h2 className={Style.subtitle}>Take a look at some of our cars!</h2>
         {products.map((product, i) => (
           <Link key={i} className={Style.card} to={`/products/${product.id}`}>
             <ProductCard product={product} />

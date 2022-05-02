@@ -2,23 +2,24 @@
   font-size: 2em;
   color: whitesmoke;
   text-align: center;
-  margin: 10%;
+  margin: 5%;
 }
 
 .description {
   font-size: 1em;
   color: whitesmoke;
   text-align: center;
-  margin: 15% 0;
+  margin: 5% 0;
 }
 
 .productsContainer {
   display: grid;
-  gap: 2%;
+  gap: 30px;
   place-items: center;
 }
 
 .subtitle {
+  margin: 5%;
   font-size: 1.5em;
   color: whitesmoke;
   text-align: center;
@@ -38,7 +39,6 @@
   }
   .productsContainer {
     grid-template-columns: 50% 50%;
-    grid-template-rows: 5% auto;
     gap: 0;
   }
   .subtitle {
@@ -52,7 +52,6 @@
 @media screen and (min-width: 1000px) {
   .productsContainer {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 10% auto;
   }
   .subtitle {
     grid-column: 1/4;
@@ -62,9 +61,15 @@
 @media screen and (min-width: 1200px) {
   .productsContainer {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 15% auto;
+  }
+  .title{
+    margin:3%;
+  }
+  .description{
+    margin: 4%;
   }
   .subtitle {
+    margin: 2%;
     grid-column: 1/5;
   }
 }
